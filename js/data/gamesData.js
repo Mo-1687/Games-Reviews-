@@ -39,7 +39,7 @@ export class Display {
     await this.receiveGamesData();
     let box = "";
     this.gamesData.forEach((game) => {
-      let short_description = game.short_description.slice(0, 100);
+      let short_description = game.short_description.slice(0, 70);
       box += `
             <div class="col card bg-transparent h-100" id="${game.id}">
             <figure class="position-relative">
