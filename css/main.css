@@ -57,8 +57,8 @@ header img {
   filter: grayscale(0.7);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  min-height: 350px;
-  max-height: 350px;
+  min-height: 370px;
+  max-height: 370px;
 }
 
 .games-content .games-container .card:hover {
