@@ -1,0 +1,139 @@
+:root {
+  --main-color: #272b30;
+  --seconde-color: #32383e;
+  --color-text: #fff;
+  --btn-main-color: #272729;
+  --btn-hover-color: #0099cc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-family: "Playpen Sans Deva", sans-serif;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--color-text);
+}
+
+/* Games Section  */
+
+header img {
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+.navbar .container {
+  background-color: #3a497b;
+  border-radius: 20px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.navbar-logo {
+  max-width: 45px;
+}
+.navbar-brand {
+  font-size: 1.2rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  text-transform: uppercase;
+  color: var(--color-text);
+  transition: color 0.3s ease-in-out;
+  font-size: 0.73rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  color: var(--btn-hover-color);
+}
+
+.games-content .games-container .card {
+  padding-top: 1rem;
+  filter: grayscale(0.7);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.games-content .games-container .card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+.games-content .games-container .card .badge {
+  background-color: var(--seconde-color);
+  font-size: 0.7rem;
+}
+
+/* Details Section  */
+.details {
+  background-color: var(--main-color);
+  opacity: 0.9;
+  z-index: 10000;
+}
+
+.details .description a {
+  color: var(--color-text);
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.details .description a:hover {
+  background-color: #ffc107;
+}
+/* Loading Section  */
+.loading {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  opacity: 0.9;
+  z-index: 10000;
+}
+
+.loading .spinner-loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 5px solid var(--btn-hover-color);
+  border-right: 5px solid transparent;
+  animation: spinner 1s linear infinite;
+}
+
+.loading .spinner-loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 5px solid #ff3d00;
+  border-bottom: 5px solid transparent;
+  animation: spinner 0.5s linear infinite reverse;
+}
+
+/* Animation */
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
