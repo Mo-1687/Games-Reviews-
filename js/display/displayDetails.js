@@ -1,15 +1,14 @@
 import { Details } from "../data/gamesDetails.js";
 export function displayDetails(
   gameDetails,
-  cards,
   detailsSection,
   gamesSection,
-  closeBtn
+  closeBtn,
+  cards
 ) {
   const detailsData = new Details(gameDetails);
-
   //   Get ID
-  console.log(cards);
+
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       const id = card.getAttribute("id");

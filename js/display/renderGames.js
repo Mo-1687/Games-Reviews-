@@ -26,19 +26,24 @@ export async function renderGames(
       category = link.getAttribute("data-category");
       displayGamesData.category = category;
       await displayGamesData.displayGames();
+      const updatedCards = document.querySelectorAll(".card");
+      displayDetails(
+        gameDetails,
+        detailsSection,
+        gamesSection,
+        closeBtn,
+        updatedCards
+      );
     });
   });
 
   await displayGamesData.displayGames();
-
-  // Call Cards Elements
   const updatedCards = document.querySelectorAll(".card");
-
   displayDetails(
     gameDetails,
-    updatedCards,
     detailsSection,
     gamesSection,
-    closeBtn
+    closeBtn,
+    updatedCards
   );
 }

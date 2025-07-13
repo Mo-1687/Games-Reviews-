@@ -4,7 +4,7 @@ export class Details {
   constructor(gameDetails) {
     this.gameDetails = gameDetails;
     this.id = "";
-    this.data = [];
+    this.data = {};
   }
 
   async receiveData() {
@@ -29,8 +29,7 @@ export class Details {
         throw new Error("Invalid ID");
       }
 
-      const data = await response.json();
-      this.data = data;
+      this.data = await response.json();
     } catch (error) {
       displayLoading(false);
       console.log(error);
